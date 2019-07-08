@@ -14,17 +14,19 @@ import uuid from "uuid";
 
 const store = configureStore()
 
-const expenseOne = store.dispatch(addExpense({ description: 'Water bill', amount: 5000, createdAt: -21000 }))
-const expenseTwo = store.dispatch(addExpense({ description: 'Gas bill', amount: 30000, createdAt: -1000 }))
-store.dispatch(setTextFilter('Water'))
 
-setTimeout(() => {
-    store.dispatch(setTextFilter('bill'))
-}, 3000)
+store.dispatch(addExpense({ description: 'Gas bill', amount: 2, createdAt: 3 }))
+store.dispatch(addExpense({ description: 'Water bill', amount: 1, createdAt: 4 }))
+store.dispatch(addExpense({ description: 'Rent', amount: 3, createdAt: 5 }))
 
-const state = store.getState()
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-console.log(visibleExpenses);
+
+// const state = store.getState()
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
+// console.log(visibleExpenses);
+
+// store.dispatch(sortByDate())
+
+// store.dispatch(sortByAmount())
 
 
 const jsx = (
