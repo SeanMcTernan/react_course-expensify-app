@@ -6,7 +6,7 @@ import React from 'react'
 import  AddExpensePage from '../components/AddExpensePage'
 import  EditExpensePage  from '../components/EditExpensePage'
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage'
-import { Header } from '../components/header'
+import Header from '../components/Header'
 import { HelpPage } from '../components/helpPage'
 import { NotFoundPage } from '../components/notFoundPage'
 
