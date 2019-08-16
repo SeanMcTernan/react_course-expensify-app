@@ -9,7 +9,7 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json --watch",
-    "start": "node server/server.js", 
+    "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
   },
   "author": "",
@@ -31,7 +31,7 @@
     "jest": "^24.8.0",
     "live-server": "^1.2.1",
     "moment": "^2.24.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.12.0",
     "normalize.css": "^7.0.0",
     "raf": "^3.3.2",
     "react": "^16.8.6",
