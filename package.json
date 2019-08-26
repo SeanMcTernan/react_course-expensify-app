@@ -13,7 +13,7 @@
     "heroku-postbuild": "npm run build:prod"
   },
 
-  "author": "",
+  "author": "Sean Mc Ternan",
   "license": "ISC",
 
   "dependencies": {
