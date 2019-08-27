@@ -1,8 +1,5 @@
-//Dependencies
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import React from 'react'
-
-//Components
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import  AddExpensePage from '../components/AddExpensePage'
 import  EditExpensePage from '../components/EditExpensePage'
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage'
@@ -28,9 +25,5 @@ const AppRouter = () => (
 
 
 export default AppRouter
-
-
-
-
 
 
