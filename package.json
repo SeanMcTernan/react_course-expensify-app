@@ -1,6 +1,9 @@
 {
   "name": "expensify",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.14.0"
+  },
   "main": "index.js",
   "author": "Sean Mc Ternan",
   "license": "MIT",
