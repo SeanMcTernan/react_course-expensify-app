@@ -4,6 +4,7 @@ exports[`Should render Expense Not Found Page correctly 1`] = `
 <div>
   404 - 
   <Link
+    replace={false}
     to="/"
   >
     Go Home
