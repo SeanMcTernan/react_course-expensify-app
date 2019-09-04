@@ -1,14 +1,14 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { ExpenseSummary } from '../../components/ExpenseList'
+import { ExpenseSummary } from '../../components/ExpenseSummary'
 import expenses from '../fixtures/expenses'
 
-test('Should Render Expense Summary Message', () => {
+test('should render expense list with expenses', () => {
     const wrapper =  shallow(<ExpenseSummary expenses={expenses} />)
     expect(wrapper).toMatchSnapshot()
 })
 
-test('Should not render any message', () => {
+test('should render expense list with with empty message', () => {
     const wrapper =  shallow(<ExpenseSummary expenses={[]} />)
     expect(wrapper).toMatchSnapshot()
 })
