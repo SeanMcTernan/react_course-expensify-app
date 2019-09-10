@@ -11,6 +11,7 @@ import './styles/styles.scss'
 import 'normalize.css/normalize.css'
 import 'react-dates/lib/css/_datepicker.css'
 import uuid from "uuid";
+import './firebase/firebase'
 
 
 
@@ -23,5 +24,4 @@ const jsx = (
 )
 
 ReactDOM.render(jsx, document.getElementById('app'))
-
 
