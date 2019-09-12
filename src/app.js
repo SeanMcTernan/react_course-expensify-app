@@ -14,7 +14,6 @@ import uuid from "uuid";
 import './firebase/firebase'
 
 
-
 const store = configureStore()
 
 const jsx = (
