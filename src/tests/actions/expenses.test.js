@@ -120,19 +120,32 @@ test('should fetch the expenses from firebase', (done) => {
     })
 })
 
-test('should remove expense from DataBase', (done) => {
-    const store = createMockStore({})
-    const actions = store.getActions()
-    store.dispatch(startRemoveExpense({ id: actions[0].expense.id})).then(() => {
-        const actions = store.getActions()
-        expect(actions).toEqual(expect.not.arrayContaining([action[0]]))
-        
-    return database.ref(`expenses/${actions[0].expense.id}`).remove()
 
+
+
+test('should remove expense from firebase', (done) => {
+    const store = createMockStore({});
+    const id = expenses[2].id;
+    store.dispatch(startRemoveExpense({ id })).then(() => {
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type: 'REMOVE_EXPENSE',
+        id
+      });
+      return database.ref(`expenses/${id}`).once('value');
     }).then((snapshot) => {
-        expect(snapshot.val()).toEqual(expect.not.arrayContaining([action[0]]))
-        done()
-    })
-})
+      expect(snapshot.val()).toBeFalsy();
+      done();
+    });
+  });
+
+        
 
 
+    
+    
+    
+    
+    
+    
+   
